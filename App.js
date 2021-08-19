@@ -3,10 +3,55 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import CarItem from './components/CarItem';
 
+const carData = [
+  {
+    name: "Model S",
+    tagline: "Order Online for",
+    taglineCTA: "Touchless Delivery",
+    image: './assets/images/ModelS.jpeg'
+  },
+  {
+    name: "Model Y",
+    tagline: "Order Online for",
+    taglineCTA: "Touchless Delivery",
+    image: './assets/images/ModelY.jpeg'
+  },
+  {
+    name: "Model 3",
+    tagline: "Order Online for",
+    taglineCTA: "Touchless Delivery",
+    image: './assets/images/Model3.jpeg'
+  },
+  {
+    name: "Model X",
+    tagline: "Order Online for",
+    taglineCTA: "Touchless Delivery",
+    image: './assets/images/ModelX.jpeg'
+  },
+  {
+    name: "Solar Panels",
+    tagline: "Lowest Cost Solar Panels in America",
+    taglineCTA: "",
+    image: './assets/images/SolarPanels.jpeg'
+  },
+  {
+    name: "Solar Roof",
+    tagline: "Produce Clean Energy From Your Roof",
+    taglineCTA: "",
+    image: './assets/images/SolarRoof.jpeg'
+  }
+]
+
 export default function App() {
   return (
     <View style={styles.container}>
-        <CarItem />
+        <CarItem
+          name="Model S"
+          tagline="Order Online for"
+          taglineCTA="Touchless Delivery"
+          image={require('./assets/images/ModelS.jpeg')}
+          />
+        <StatusBar style="auto" />
     </View>
   );
 }
@@ -17,28 +62,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  bgImage: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover'
-  },
-  carContainer: {
-    width: '100%',
-    height: '100%'
-  },
-  titlesView: {
-    marginTop: '40%',
-    width: '100%',
-    alignItems: 'center',
-    position: 'absolute'
-  },
-  title: {
-    fontSize: 40,
-    fontWeight: '500'
-  },
-  subTitle: {
-    fontSize: 16,
-    color: '#5c5e62'
   }
 });

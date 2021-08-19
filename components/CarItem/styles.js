@@ -1,26 +1,20 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: 'white',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    bgImage: {
-      width: '100%',
-      height: '100%',
-      resizeMode: 'cover'
-    },
     carContainer: {
       width: '100%',
       height: '100%'
     },
+    bgImage: {
+      width: '100%',
+      height: '100%',
+      resizeMode: 'cover',
+      position: 'absolute'
+    },
     titlesView: {
       marginTop: '40%',
       width: '100%',
-      alignItems: 'center',
-      position: 'absolute'
+      alignItems: 'center'
     },
     title: {
       fontSize: 40,
@@ -29,6 +23,14 @@ const styles = StyleSheet.create({
     subTitle: {
       fontSize: 16,
       color: '#5c5e62'
+    },
+    subTitleCTA: {
+      textDecorationLine: 'underline'
+    },
+    btnContainer: {
+      position: 'absolute',
+      bottom: 50,
+      width: '100%'
     }
   });
 
