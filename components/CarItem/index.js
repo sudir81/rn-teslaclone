@@ -3,18 +3,22 @@ import { View, Text, ImageBackground } from 'react-native'
 import CustomLongRoundedButton from '../CustomLongRoundedButton'
 import styles from './styles'
 
-const CarItem = ({ name, tagline, taglineCTA, image }) => {
+const CarItem = ({ car }) => {
+    // const {
+    //     name, tagline, taglineCTA, image
+    // } = car;
+    
     return (
         <>
             <View style={styles.carContainer}>
-                <ImageBackground source={image}
+                <ImageBackground source={car.image}
                     style={styles.bgImage} />
                 <View style={styles.titlesView}>
-                    <Text style={styles.title}>{ name }</Text>
+                    <Text style={styles.title}>{ car.name }</Text>
                     <Text style={styles.subTitle}>
-                        { tagline }{' '}
+                        { car.tagline }{' '}
                         <Text style={styles.subTitleCTA}>
-                            {taglineCTA}
+                            { car.taglineCTA }
                         </Text>
                     </Text>
                 </View>
